@@ -1,3 +1,8 @@
+#include<vector>
+#include<unordered_set>
+
+using namespace std;
+
 /*
 Leetcode #260
 Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. 

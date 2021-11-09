@@ -1,2 +1,2 @@
 # GoCode
-All google questions in leetcode
+All questions solved in leetcode

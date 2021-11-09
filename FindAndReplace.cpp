@@ -14,6 +14,7 @@ Solution :
 create mapping of indexes to source and target indexes and sort the index list.
 traverse index array backwards and replace source strings to target
 */
+
 string findReplaceString(string S, vector<int> indexes, vector<string> sources, vector<string> targets) {
 
 	vector<pair<int, int>> m;

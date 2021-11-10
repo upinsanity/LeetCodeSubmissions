@@ -22,26 +22,26 @@ Initialize max sum from 0 and 1
 Use maxSum at index-2 and current value to decide current max sum
 */
 
-    int maxOf( int a, int b )
+int maxOf( int a, int b )
+{
+    return (a>b)?a:b;
+}
+
+int rob(vector<int>& nums) {
+
+    vector<int> maxSum;
+
+    for( int i=0; i<nums.size(); i++ )
     {
-        return (a>b)?a:b;
-    }
-    
-    int rob(vector<int>& nums) {
-        
-        vector<int> maxSum;
-        
-        for( int i=0; i<nums.size(); i++ )
+        if( i == 0 )
+            maxSum.push_back(nums[0]);
+        else if( i == 1 )
+            maxSum.push_back(maxOf(nums[0],nums[1]));
+        else if( i > 1)
         {
-            if( i == 0 )
-                maxSum.push_back(nums[0]);
-            else if( i == 1 )
-                maxSum.push_back(maxOf(nums[0],nums[1]));
-            else if( i > 1)
-            {
-               maxSum.push_back(maxOf(maxSum[i-1] , maxSum[i-2]+nums[i]));
-            }
+           maxSum.push_back(maxOf(maxSum[i-1] , maxSum[i-2]+nums[i]));
         }
-        
-        return maxSum[nums.size()-1];
     }
+
+    return maxSum[nums.size()-1];
+}

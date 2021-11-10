@@ -15,6 +15,11 @@ Output: 4
 
 Input: nums = [2,7,9,3,1]
 Output: 12
+
+Solution -
+Traverse input and maintain maximum sum for index
+Initialize max sum from 0 and 1 
+Use maxSum at index-2 and current value to decide current max sum
 */
 
     int maxOf( int a, int b )
